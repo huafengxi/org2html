@@ -86,7 +86,7 @@ nav a {
 
 '''
 html_template_str = '''
-root: <html><head><title>$title</title><style type="text/css">$css</style></head><body><div>$html_header</div><div><h1>$title</h1>$whole</div></body></html>
+root: <html><head><meta charset="UTF-8"><title>$title</title><style type="text/css">$css</style></head><body><div>$html_header</div><div><h1>$title</h1>$whole</div></body></html>
 head: <div>$whole</div>
 list+: <ol>$whole</ol>
 list: <li>$whole</li>
