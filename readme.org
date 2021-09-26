@@ -9,4 +9,9 @@ It is a very short script, just serve my needs(render simple blog like documents
 
 It is not tested by complex org file. see =org2an.py= if you want to convert =a.org= to other format.
 
+* org-js
 see also [[https://github.com/mooz/org-js]], a javascript library doing the same thing.
+
+* anchor-right.py
+There is also an script to convert =xxx.org= to =xxx.html= for html anchor's href field.
+: find . -name *.html -exec ./anchor-right.py \{} \; 
