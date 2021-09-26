@@ -57,13 +57,12 @@ def aggregate_group(tree):
 
 css_str = '''
 body {
-    font-family: 微软雅黑, serif;
     //font-size: 16px;
     margin:0px 5px 0px 5px;
 }
 a { text-decoration: none; }
 .section-number { padding-right: 10px; }
-h1,h2,h3,h4,h5 { font-family: 微软雅黑; };
+h1,h2,h3,h4,h5 {};
 th { background: black; color: white; }
 th, td {  vertical-align: middle; text-align:left;  font-family: courier, monospace;}
 table, th, td { border: 1px solid black; border-collapse: collapse; }
@@ -75,7 +74,6 @@ code, pre {
 
 nav {
     padding: 1px;
-    font-family: 微软雅黑;
     margin-bottom: 1px;
     /* background: DarkSlateGray; */
 }
@@ -86,7 +84,7 @@ nav a {
 
 '''
 html_template_str = '''
-root: <html><head><meta charset="UTF-8"><title>$title</title><style type="text/css">$css</style></head><body><div>$html_header</div><div><h1>$title</h1>$whole</div></body></html>
+root: <html><head><title>$title</title><meta charset="UTF-8"/><style type="text/css">$css</style></head><body><div>$html_header</div><div><h1>$title</h1>$whole</div></body></html>
 head: <div>$whole</div>
 list+: <ol>$whole</ol>
 list: <li>$whole</li>
@@ -170,4 +168,4 @@ if __name__ == '__main__':
     if sys.stdin.isatty():
         print __doc__
         sys.exit(1)
-    print '<!DOCTYPE html>' + org2html(sys.stdin.read())
+    print '<!DOCTYPE html>\n' + org2html(sys.stdin.read())
