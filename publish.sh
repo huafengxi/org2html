@@ -61,13 +61,13 @@ PYEOF
 }
 fi
 
-# rewrite href="*.org" -> "*.html" (same job as anchor-right.py, py3-safe)
+# rewrite href="*.org" / "*.md" -> "*.html" (same job as anchor-right.py, py3-safe)
 org_links_to_html() {
     $py - "$1" <<'PYEOF'
 import sys, re
 p = sys.argv[1]
 c = open(p).read()
-new = re.sub(r'(<a\s+href\s*=\s*"[^"]*?)\.org(")', r'\1.html\2', c)
+new = re.sub(r'(<a\s+href\s*=\s*"[^"]*?)\.(?:org|md)(")', r'\1.html\2', c)
 if new != c:
     open(p, 'w').write(new)
 PYEOF
