@@ -18,3 +18,8 @@ There is also an script to convert =xxx.org= to =xxx.html= for html anchor's hre
 
 * org-js
 see also [[https://github.com/mooz/org-js]], a javascript library doing the same thing.
+
+* sync
+This repo is synced across machines via the dev mirror (origin=dev:~/git) with
+an event-driven fast-forward push-back hook to GitHub, plus periodic ff-only
+auto-pulls on each machine (see ~/m SETUP.md "代码自动同步").
